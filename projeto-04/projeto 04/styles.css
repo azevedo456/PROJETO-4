@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos gerais */
+body {
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('capa.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ff6600;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    list-style: none;
+    padding: 0.5em 0;
+}
+
+nav a {
+    color: #b41313;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Banner */
+.banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 4em 0;
+    text-align: center;
+    color: #c40f0f;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+.intro {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Seções */
+section {
+    padding: 2em;
+    margin: 0 auto 3em;
+    max-width: 1000px;
+    background-color: #be5006;
+    color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #ff6600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Biografia */
+#biografia p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 1em;
+}
+
+/* Discografia */
+#discografia .album,
+.album2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.album figure,
+.album2 figure {
+    width: 45%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.album img,
+.album2 img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+    margin-bottom: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.album img:hover,
+.album2 img:hover {
+    transform: scale(1.05);
+}
+
+figcaption h3,
+figcaption h4 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+figcaption p {
+    color: #ccc;
+}
+
+/* Galeria */
+#galeria .fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    justify-items: center;
+    margin-bottom: 3em;
+}
+
+.fotos img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.fotos img:hover {
+    transform: scale(1.05);
+}
+
+/* Contato */
+#contato {
+    text-align: center;
+}
+
+#contato a {
+    color: #ff6600;
+    font-size: 2em;
+    margin: 0 1em;
+    transition: color 0.3s ease;
+}
+
+#contato a:hover {
+    color: #c40f0f;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #c40f0f;
+    padding: 2em 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+    }
+
+    .intro {
+        font-size: 1.2em;
+    }
+
+    section {
+        padding: 1.5em;
+    }
+
+    .album figure,
+    .album2 figure {
+        width: 100%;
+    }
+
+    .fotos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .album img,
+    .album2 img {
+        max-width: 150px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
